@@ -19,7 +19,8 @@ public class Tamagotchi
     if (hunger > 0)
     {
       Console.WriteLine($" [{namn}] blir matat och är inte lika hungrig");
-      hunger = new Random().Next(2,5);
+      hunger -= new Random().Next(2,5);
+      hunger = 0;
     }
     else if (hunger == 0)
     {
